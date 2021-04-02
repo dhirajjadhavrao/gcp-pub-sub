@@ -1,0 +1,18 @@
+server:
+  port : 8082
+spring:
+  cloud:
+    gcp:
+      project-id: refeed-309308
+      credentials:
+        location: classpath:service-account.json
+      pubsub:
+        subscriber:
+          publisher-threads: 1
+      trace:
+        enabled: false
+        project-id: refeed-309308
+        wait-for-ready: true
+        num-executor-threads: 8
+        credentials:
+          location: classpath:service-account.json
